@@ -2,7 +2,7 @@
   "name": "EYVL",
   "id": "610bc913-f11d-4364-9198-75be984a8f56",
   "updateUrl": "https://raw.githubusercontent.com/Lithuania-vACC/EYVL-vATIS/refs/heads/main/EYVL.json",
-  "updateSerial": 2026071202,
+  "updateSerial": 2026102301,
   "stations": [
     {
       "id": "5e651c57-5cec-427d-8050-6cf277899280",
@@ -2101,11 +2101,6 @@
           "voice": "TURBULENCE"
         },
         {
-          "variableName": "LVP",
-          "text": "LOW VIS PROCEDURES IN OPS",
-          "voice": "LOW VISIBILITY PROCEDURES IN OPERATION"
-        },
-        {
           "variableName": "COND",
           "text": "COND",
           "voice": "CONDITION"
@@ -2166,7 +2161,7 @@
           "voice": "ZULU"
         },
         {
-          "variableName": "LVP",
+          "variableName": "LVP_AUTO",
           "text": "LVP IN FORCE",
           "voice": "LOW VISIBILITY PROCEDURES IN FORCE."
         },
@@ -2186,6 +2181,7 @@
           "voice": "APPROACH."
         }
       ],
+      "patterns": [],
       "airportConditionDefinitions": [
         {
           "text": "ILS @Z",
@@ -2215,9 +2211,10 @@
       ],
       "notamDefinitions": [
         {
-          "text": "@LVP",
+          "text": "@LVP_AUTO",
           "ordinal": 1,
-          "enabled": false
+          "weatherCondition": "rvr < 600m OR ceiling <= 200m",
+          "enabled": true
         }
       ]
     },
@@ -4379,7 +4376,7 @@
           "voice": "ZULU"
         },
         {
-          "variableName": "LVP",
+          "variableName": "LVP_AUTO",
           "text": "LVP Take-off Procedures are in force",
           "voice": "Low Visibility Take-off Procedures are in force."
         },
@@ -4399,6 +4396,7 @@
           "voice": "APPROACH."
         }
       ],
+      "patterns": [],
       "airportConditionDefinitions": [
         {
           "text": "ILS",
@@ -4423,9 +4421,10 @@
       ],
       "notamDefinitions": [
         {
-          "text": "@LVP",
+          "text": "@LVP_AUTO",
           "ordinal": 1,
-          "enabled": false
+          "weatherCondition": "rvr <= 350m",
+          "enabled": true
         }
       ]
     },
@@ -6611,6 +6610,7 @@
           "voice": "APPROACH."
         }
       ],
+      "patterns": [],
       "airportConditionDefinitions": [
         {
           "text": "ILS",
@@ -6630,9 +6630,10 @@
       ],
       "notamDefinitions": [
         {
-          "text": "@LVP",
+          "text": "@LVP_AUTO",
           "ordinal": 1,
-          "enabled": false
+          "weatherCondition": "rvr < 550m",
+          "enabled": true
         }
       ]
     },
@@ -8798,7 +8799,7 @@
           "voice": "COLLABORATIVE DECISION MAKING IN PROGRESS, VISIT V A TS. DOT. I M. SLASH VDGS FOR YOUR PUSHBACKTIME."
         },
         {
-          "variableName": "LVP",
+          "variableName": "LVP_AUTO",
           "text": "LVP CAT 2 in Operation",
           "voice": "Low Visibility Procedures CAT 2 in Operation."
         },
@@ -8813,6 +8814,7 @@
           "voice": "APPROACH."
         }
       ],
+      "patterns": [],
       "airportConditionDefinitions": [
         {
           "text": "ILS @Z",
@@ -8842,9 +8844,10 @@
       ],
       "notamDefinitions": [
         {
-          "text": "@LVP",
+          "text": "@LVP_AUTO",
           "ordinal": 1,
-          "enabled": false
+          "weatherCondition": "ceiling < 200ft OR rvr <= 600m",
+          "enabled": true
         }
       ]
     }
